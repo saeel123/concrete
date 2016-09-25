@@ -14,4 +14,11 @@ Class NewsroomController extends Controller {
 		
 	}
 
+	public function save()
+	{
+		$name = $this->post('name');
+		print $name;
+		exit;
+	}
+
 }
