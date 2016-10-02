@@ -14,6 +14,9 @@ Class MyFavoriteColorController extends Controller {
 		}
 		$form = Loader::helper('form');
 		$this->set('form', $form);
+		$hcolor = Loader::helper('form/color');
+		$this->set('hcolor', $hcolor);
+
 	}
 
 
@@ -26,12 +29,33 @@ Class MyFavoriteColorController extends Controller {
 	}
 
 	public function update_color() {
-		$this->view();
+		
+
+		// $this->view();
 		if ($this->myUI instanceof UserInfo) {
+
+			// $color = $this->post('color');
+			//  print $color;
+			// exit;
+
+			Loader::library('file/importer');
+			$fi = new FileImporter();
+			$pathTofile = $_FILES['my_image']['tmp_name'];
+			$nameOfFile = $_FILES['my_image']['name'];
+			$myFileObject = $fi->import($pathTofile, $nameOfFile);
+
+			if (is_object($myFileObject)) {
+				Loader::model('file_set');
+				$fs = FileSet::getByName('Favorite Color Pics');
+				$fs->addFileToSet($myFileObject);
+			}
+
 			$this->myUI->setAttribute('favorite_color', $this->post('color'));
+			$this->myUI->setAttribute('favorite_color_picture', $myFileObject);
 			// print_r($this->myUI);
 			// exits;
 		}
+
 		$this->redirect('my_favorite_color', 'color_updated');
 	}
 

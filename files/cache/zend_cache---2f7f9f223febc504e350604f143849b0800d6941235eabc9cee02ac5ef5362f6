@@ -1,0 +1,9 @@
+s:427:"<h6>Featured Add-On</h6>
+	<div class="clearfix">
+	<img src="https://www.concrete5.org/files/6114/6096/4867/common_markdown_icon.png" width="97" height="97" style="float: left; margin-right: 10px; margin-bottom: 10px" />
+	<h3>Common Markdown</h3>
+	<p>Markdown editor that supports the CommonMark specification.</p>
+	</div>
+	
+	<a href="javascript:void(0)" onclick="ccm_getMarketplaceItemDetails(2317)" class="btn">Learn More</a>
+";

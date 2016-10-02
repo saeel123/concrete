@@ -1,0 +1,9 @@
+s:471:"<h6>Featured Theme</h6>
+	<div class="clearfix">
+	<img src="https://www.concrete5.org/files/5014/6040/4307/motif_icon.png" width="97" height="97" style="float: left; margin-right: 10px; margin-bottom: 10px" />
+	<h3>Motif</h3>
+	<p>Motif is a multi-purpose theme for Concrete5 built on Bootstrap 3.</p>
+	</div>
+	
+	<a href="javascript:void(0)" onclick="ccm_getMarketplaceItemDetails(2309)" href="https://www.concrete5.org/marketplace/themes/motif" class="btn">Learn More</a>
+";
